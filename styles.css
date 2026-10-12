@@ -100,7 +100,7 @@ footer { color: #c6d8e9; background: #04254e; }
 footer p { margin: 0; }
 .footer-inner a { color: #fff; text-decoration: none; }
 
-@media (max-width: 760px) {
+@media (max-width: 840px) {
   .topbar-inner { justify-content: center; text-align: center; }
   .topbar-inner span:first-child { display: none; }
   .nav { min-height: 82px; }
