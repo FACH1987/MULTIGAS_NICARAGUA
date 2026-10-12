@@ -93,6 +93,7 @@ h2 { margin: 12px 0 11px; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.12; 
 .contact-symbol { flex: 0 0 23px; color: #ff9c4d; text-align: center; font-weight: 850; }
 .contact-item strong { display: block; margin-bottom: 2px; color: var(--white); font-size: .83rem; }
 .contact-item a, .contact-item span { color: #c6d8e9; text-decoration: none; font-size: .91rem; }
+.contact-links { display: grid; justify-items: start; gap: 4px; }
 .contact-item a:hover { color: #ffad63; }
 footer { color: #c6d8e9; background: #04254e; }
 .footer-inner { display: flex; justify-content: space-between; gap: 20px; padding-block: 22px; font-size: .8rem; }
