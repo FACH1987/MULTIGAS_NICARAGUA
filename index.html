@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#10251d">
+  <meta name="theme-color" content="#062f63">
   <meta name="description" content="Multigas de Nicaragua: venta de tanques, reguladores, extintores y accesorios. Servicios de instalaciones de gas LP y contra incendios en Managua.">
   <title>Multigas de Nicaragua | Gas LP y seguridad</title>
   <style>
     :root {
       color-scheme: light;
-      --ink: #17251e;
-      --muted: #66736b;
-      --green: #176b45;
-      --green-dark: #10251d;
-      --lime: #c9e46b;
-      --orange: #ee9b3d;
-      --paper: #f7f8f3;
-      --line: #e3e8df;
+      --ink: #092f61;
+      --muted: #5b6f86;
+      --blue: #0879d1;
+      --blue-dark: #062f63;
+      --orange: #f4510b;
+      --red: #e5232d;
+      --paper: #f4f8fb;
+      --line: #dbe6ef;
       --white: #fff;
       font-family: Inter, "Segoe UI", Arial, sans-serif;
     }
@@ -26,92 +26,93 @@
     body { margin: 0; color: var(--ink); background: var(--paper); line-height: 1.6; }
     a { color: inherit; }
     .wrap { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
-    .topbar { background: var(--green-dark); color: #d9e4da; font-size: .83rem; }
+    .topbar { background: var(--blue-dark); color: #e3edf6; font-size: .83rem; }
     .topbar-inner { display: flex; justify-content: space-between; gap: 20px; padding-block: 9px; }
     .topbar a { text-decoration: none; }
     header { position: sticky; top: 0; z-index: 5; background: rgb(255 255 255 / 96%); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
-    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .brand { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; }
-    .brand-mark { display: grid; place-items: center; width: 43px; height: 43px; border-radius: 13px; color: var(--white); background: var(--green); font-weight: 900; letter-spacing: -.08em; }
-    .brand-name { display: block; font-size: .95rem; line-height: 1.15; font-weight: 850; letter-spacing: .025em; }
-    .brand-name small { display: block; margin-top: 4px; color: var(--muted); font-size: .66rem; font-weight: 700; letter-spacing: .17em; }
+    .nav { min-height: 94px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; text-decoration: none; }
+    .brand-logo { display: block; width: min(280px, 38vw); height: auto; }
     .nav-links { display: flex; align-items: center; gap: 27px; }
-    .nav-links a { text-decoration: none; color: #435148; font-size: .9rem; font-weight: 650; }
-    .nav-links a:hover { color: var(--green); }
+    .nav-links a { text-decoration: none; color: #334c67; font-size: .9rem; font-weight: 650; }
+    .nav-links a:hover { color: var(--blue); }
     .nav-links a.button { color: var(--white); }
-    .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 48px; padding: 0 20px; border: 0; border-radius: 8px; background: var(--green); color: var(--white); text-decoration: none; font-weight: 750; transition: transform .2s, background .2s; }
-    .button:hover { background: #105536; transform: translateY(-2px); }
-    .button-light { background: var(--white); color: var(--green-dark); }
-    .button-light:hover { background: #edf2e7; }
-    .hero { position: relative; overflow: hidden; color: var(--white); background: var(--green-dark); }
-    .hero::before, .hero::after { position: absolute; content: ""; border: 1px solid rgb(201 228 107 / 14%); border-radius: 50%; pointer-events: none; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 48px; padding: 0 20px; border: 0; border-radius: 8px; background: var(--orange); color: var(--white); text-decoration: none; font-weight: 750; transition: transform .2s, background .2s; }
+    .button:hover { background: #d94006; transform: translateY(-2px); }
+    .button-light { background: var(--white); color: var(--blue-dark); }
+    .button-light:hover { background: #eaf3fa; }
+    .hero { position: relative; overflow: hidden; color: var(--white); background: var(--blue-dark); }
+    .hero::before, .hero::after { position: absolute; content: ""; border: 1px solid rgb(71 166 235 / 24%); border-radius: 50%; pointer-events: none; }
     .hero::before { width: 660px; height: 660px; right: -170px; top: -350px; }
     .hero::after { width: 440px; height: 440px; right: -60px; top: -240px; }
     .hero-grid { position: relative; display: grid; grid-template-columns: 1.15fr .85fr; align-items: center; gap: 40px; min-height: 530px; padding-block: 74px; }
-    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--lime); font-size: .76rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: #ff9c4d; font-size: .76rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
     .eyebrow::before { content: ""; width: 22px; height: 2px; background: currentColor; }
     h1, h2, h3, p { margin-top: 0; }
     h1 { max-width: 650px; margin-block: 20px; font-size: clamp(2.7rem, 5.5vw, 4.65rem); line-height: 1.04; letter-spacing: -.055em; }
-    .hero-copy { max-width: 510px; margin-bottom: 27px; color: #c1cec5; font-size: 1.08rem; }
+    .hero-copy { max-width: 510px; margin-bottom: 27px; color: #c6d8e9; font-size: 1.08rem; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-    .hero-note { margin: 22px 0 0; color: #a9b9ad; font-size: .85rem; }
+    .hero-note { margin: 22px 0 0; color: #aec4d9; font-size: .85rem; }
     .hero-art { position: relative; display: grid; place-items: center; min-height: 330px; }
-    .hero-orbit { position: absolute; width: min(100%, 380px); aspect-ratio: 1; border: 1px solid rgb(201 228 107 / 25%); border-radius: 50%; }
-    .hero-orbit::before, .hero-orbit::after { position: absolute; content: ""; border: 1px solid rgb(201 228 107 / 15%); border-radius: 50%; inset: 28px; }
+    .hero-orbit { position: absolute; width: min(100%, 380px); aspect-ratio: 1; border: 1px solid rgb(71 166 235 / 40%); border-radius: 50%; }
+    .hero-orbit::before, .hero-orbit::after { position: absolute; content: ""; border: 1px solid rgb(71 166 235 / 22%); border-radius: 50%; inset: 28px; }
     .hero-orbit::after { inset: 58px; }
-    .cylinder { position: relative; width: 151px; height: 242px; border: 8px solid #f4f2de; border-radius: 42px 42px 32px 32px; background: linear-gradient(100deg, #dce7cd, #fffce9 38%, #bbc9b2); box-shadow: 25px 25px 55px rgb(0 0 0 / 25%); }
-    .cylinder::before { position: absolute; content: ""; width: 54px; height: 31px; left: 40px; top: -35px; border-radius: 7px 7px 2px 2px; background: #c8d6c0; }
+    .cylinder { position: relative; width: 151px; height: 242px; border: 8px solid #e7eff6; border-radius: 42px 42px 32px 32px; background: linear-gradient(100deg, #c8d9e7, #fff 38%, #9fb4c5); box-shadow: 25px 25px 55px rgb(0 0 0 / 25%); }
+    .cylinder::before { position: absolute; content: ""; width: 54px; height: 31px; left: 40px; top: -35px; border-radius: 7px 7px 2px 2px; background: #b9cbd9; }
     .cylinder::after { position: absolute; content: ""; width: 27px; height: 11px; left: 53px; top: -43px; border-radius: 4px 4px 0 0; background: var(--orange); }
-    .cylinder-label { position: absolute; inset: 78px 0 auto; padding: 13px 3px; text-align: center; color: var(--white); background: var(--green); font-size: .77rem; line-height: 1.2; font-weight: 900; letter-spacing: .08em; }
+    .cylinder-label { position: absolute; inset: 78px 0 auto; padding: 13px 3px; text-align: center; color: var(--white); background: var(--blue); font-size: .77rem; line-height: 1.2; font-weight: 900; letter-spacing: .08em; }
     .cylinder-label small { display: block; margin-top: 5px; font-size: .55rem; letter-spacing: .2em; }
-    .floating-tag { position: absolute; right: 0; bottom: 29px; padding: 13px 17px; border: 1px solid rgb(255 255 255 / 15%); border-radius: 10px; background: #1a3529; box-shadow: 0 12px 35px rgb(0 0 0 / 15%); }
-    .floating-tag strong { display: block; color: var(--lime); font-size: .88rem; }
-    .floating-tag span { color: #c1cec5; font-size: .76rem; }
+    .floating-tag { position: absolute; right: 0; bottom: 29px; padding: 13px 17px; border: 1px solid rgb(255 255 255 / 15%); border-radius: 10px; background: #104477; box-shadow: 0 12px 35px rgb(0 0 0 / 15%); }
+    .floating-tag strong { display: block; color: #ffad63; font-size: .88rem; }
+    .floating-tag span { color: #c6d8e9; font-size: .76rem; }
     .trust-strip { background: var(--white); border-bottom: 1px solid var(--line); }
     .trust-inner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding-block: 23px; }
-    .trust-item { display: flex; justify-content: center; align-items: center; gap: 11px; color: #34453a; font-size: .88rem; font-weight: 700; }
-    .check { display: grid; place-items: center; flex: 0 0 27px; height: 27px; border-radius: 50%; background: #edf4df; color: var(--green); font-weight: 900; }
+    .trust-item { display: flex; justify-content: center; align-items: center; gap: 11px; color: #183d69; font-size: .88rem; font-weight: 700; }
+    .check { display: grid; place-items: center; flex: 0 0 27px; height: 27px; border-radius: 50%; background: #e5f2fc; color: var(--blue); font-weight: 900; }
     section { scroll-margin-top: 90px; }
     .section { padding-block: 86px; }
     .section-head { max-width: 630px; margin: 0 auto 38px; text-align: center; }
-    .section-head .eyebrow { color: var(--green); }
+    .section-head .eyebrow { color: var(--orange); }
     h2 { margin: 12px 0 11px; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.12; letter-spacing: -.04em; }
     .section-head p { margin-bottom: 0; color: var(--muted); }
     .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
     .card { min-height: 190px; padding: 25px; border: 1px solid var(--line); border-radius: 12px; background: var(--white); transition: box-shadow .2s, transform .2s; }
     .card:hover { transform: translateY(-3px); box-shadow: 0 14px 35px rgb(23 37 30 / 8%); }
-    .card-icon { display: grid; place-items: center; width: 43px; height: 43px; margin-bottom: 19px; border-radius: 12px; color: var(--green); background: #edf4df; font-size: 1.2rem; font-weight: 850; }
+    .card-icon { display: grid; place-items: center; width: 43px; height: 43px; margin-bottom: 19px; border-radius: 12px; color: var(--blue); background: #e5f2fc; font-size: 1.2rem; font-weight: 850; }
     .card h3 { margin-bottom: 7px; font-size: 1.08rem; }
     .card p { margin-bottom: 0; color: var(--muted); font-size: .91rem; }
-    .services { background: #edf2e9; }
+    .services { background: #eaf3fa; }
     .services-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; align-items: center; }
-    .services-intro .eyebrow { color: var(--green); }
+    .services-intro .eyebrow { color: var(--blue); }
     .services-intro p { color: var(--muted); }
     .service-list { display: grid; gap: 13px; }
-    .service-row { display: flex; align-items: center; gap: 16px; padding: 18px 20px; border: 1px solid #dde6da; border-radius: 10px; background: rgb(255 255 255 / 82%); }
+    .service-row { display: flex; align-items: center; gap: 16px; padding: 18px 20px; border: 1px solid #d3e2ee; border-radius: 10px; background: rgb(255 255 255 / 88%); }
     .service-row .card-icon { flex: 0 0 43px; margin: 0; }
     .service-row strong { display: block; font-size: .97rem; }
     .service-row span { color: var(--muted); font-size: .84rem; }
-    .contact { padding-block: 78px; color: var(--white); background: var(--green-dark); }
+    .contact { padding-block: 78px; color: var(--white); background: var(--blue-dark); }
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
-    .contact .eyebrow { color: var(--lime); }
+    .contact .eyebrow { color: #ff9c4d; }
     .contact h2 { max-width: 480px; }
-    .contact-copy { color: #c1cec5; }
+    .contact-copy { color: #c6d8e9; }
+    .contact .button { background: var(--red); }
+    .contact .button:hover { background: #c91d26; }
     .contact-details { display: grid; gap: 12px; }
-    .contact-item { display: flex; gap: 13px; padding: 15px 17px; border: 1px solid rgb(255 255 255 / 13%); border-radius: 9px; background: rgb(255 255 255 / 4%); }
-    .contact-symbol { flex: 0 0 23px; color: var(--lime); text-align: center; font-weight: 850; }
+    .contact-item { display: flex; gap: 13px; padding: 15px 17px; border: 1px solid rgb(255 255 255 / 16%); border-radius: 9px; background: rgb(255 255 255 / 5%); }
+    .contact-symbol { flex: 0 0 23px; color: #ff9c4d; text-align: center; font-weight: 850; }
     .contact-item strong { display: block; margin-bottom: 2px; color: var(--white); font-size: .83rem; }
-    .contact-item a, .contact-item span { color: #c1cec5; text-decoration: none; font-size: .91rem; }
-    .contact-item a:hover { color: var(--lime); }
-    footer { color: #bdc9c0; background: #0b1b14; }
+    .contact-item a, .contact-item span { color: #c6d8e9; text-decoration: none; font-size: .91rem; }
+    .contact-item a:hover { color: #ffad63; }
+    footer { color: #c6d8e9; background: #04254e; }
     .footer-inner { display: flex; justify-content: space-between; gap: 20px; padding-block: 22px; font-size: .8rem; }
     footer p { margin: 0; }
-    .footer-inner a { color: #d9e4da; text-decoration: none; }
+    .footer-inner a { color: #fff; text-decoration: none; }
 
     @media (max-width: 760px) {
       .topbar-inner { justify-content: center; text-align: center; }
       .topbar-inner span:first-child { display: none; }
-      .nav { min-height: 68px; }
+      .nav { min-height: 82px; }
+      .brand-logo { width: min(260px, 40vw); }
       .nav-links { gap: 15px; }
       .nav-links a { font-size: .81rem; }
       .nav-links .button { display: none; }
@@ -128,7 +129,7 @@
     @media (max-width: 480px) {
       .wrap { width: min(100% - 30px, 1120px); }
       .nav { flex-wrap: wrap; padding-block: 12px; }
-      .brand-name { font-size: .83rem; }
+      .brand-logo { width: min(270px, 70vw); }
       .nav-links { gap: 11px; }
       .nav-links a { font-size: .76rem; }
       .nav-links { width: 100%; justify-content: space-between; }
@@ -154,8 +155,7 @@
   <header>
     <nav class="wrap nav" aria-label="Navegación principal">
       <a class="brand" href="#inicio" aria-label="Multigas de Nicaragua, inicio">
-        <span class="brand-mark" aria-hidden="true">MG</span>
-        <span class="brand-name">MULTIGAS<small>DE NICARAGUA</small></span>
+        <img class="brand-logo" src="assets/multigas-logo.png" alt="Multigas de Nicaragua">
       </a>
       <div class="nav-links">
         <a href="#productos">Productos</a>
