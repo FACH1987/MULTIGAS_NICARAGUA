@@ -72,6 +72,8 @@ h2 { margin: 12px 0 11px; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.12; 
 .card-icon { display: grid; place-items: center; width: 43px; height: 43px; margin-bottom: 19px; border-radius: 12px; color: var(--blue); background: #e5f2fc; font-size: 1.2rem; font-weight: 850; }
 .card h3 { margin-bottom: 7px; font-size: 1.08rem; }
 .card p { margin-bottom: 0; color: var(--muted); font-size: .91rem; }
+.product-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 18px; }
+.product-gallery img { display: block; width: 100%; aspect-ratio: 4 / 5; border-radius: 7px; background: var(--paper); object-fit: contain; }
 .services { background: #eaf3fa; }
 .services-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; align-items: center; }
 .services-intro .eyebrow { color: var(--blue); }
