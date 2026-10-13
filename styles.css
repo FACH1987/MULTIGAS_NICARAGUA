@@ -78,9 +78,11 @@ h2 { margin: 12px 0 11px; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.12; 
 .services-intro p { color: var(--muted); }
 .service-list { display: grid; gap: 13px; }
 .service-row { display: flex; align-items: center; gap: 16px; padding: 18px 20px; border: 1px solid #d3e2ee; border-radius: 10px; background: rgb(255 255 255 / 88%); }
+.service-row-video { align-items: flex-start; }
 .service-row .card-icon { flex: 0 0 43px; margin: 0; }
 .service-row strong { display: block; font-size: .97rem; }
 .service-row span { color: var(--muted); font-size: .84rem; }
+.service-video { display: block; width: 100%; aspect-ratio: 16 / 9; margin-top: 12px; border-radius: 8px; background: var(--blue-dark); }
 .contact { padding-block: 78px; color: var(--white); background: var(--blue-dark); }
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
 .contact .eyebrow { color: #ff9c4d; }
