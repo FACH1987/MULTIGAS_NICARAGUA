@@ -10,7 +10,7 @@
   --line: #dbe6ef;
   --white: #fff;
   font-family: Inter, "Segoe UI", Arial, sans-serif;
-  font-size: 30px;
+  font-size: 16px;
 }
 
 * { box-sizing: border-box; }
@@ -38,6 +38,7 @@ header { position: sticky; top: 0; z-index: 5; background: rgb(255 255 255 / 96%
 .hero::before { width: 660px; height: 660px; right: -170px; top: -350px; }
 .hero::after { width: 440px; height: 440px; right: -60px; top: -240px; }
 .hero-grid { position: relative; display: grid; grid-template-columns: 1.15fr .85fr; align-items: center; gap: 40px; min-height: 530px; padding-block: 74px; }
+.hero-grid > *, .services-layout > *, .contact-grid > * { min-width: 0; }
 .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: #ff9c4d; font-size: .76rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
 .eyebrow::before { content: ""; width: 22px; height: 2px; background: currentColor; }
 h1, h2, h3, p { margin-top: 0; }
@@ -148,6 +149,8 @@ footer p { margin: 0; }
   .button { min-height: 45px; padding-inline: 15px; font-size: .88rem; }
   .card-grid { grid-template-columns: 1fr; }
   .card { min-height: auto; }
+  .service-row-video { flex-direction: column; }
+  .service-row-video .card-icon { flex-basis: auto; }
   .footer-inner { flex-direction: column; }
 }
 
