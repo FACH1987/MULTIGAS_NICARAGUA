@@ -10,6 +10,7 @@
   --line: #dbe6ef;
   --white: #fff;
   font-family: Inter, "Segoe UI", Arial, sans-serif;
+  font-size: 17px;
 }
 
 * { box-sizing: border-box; }
@@ -23,7 +24,7 @@ a { color: inherit; }
 header { position: sticky; top: 0; z-index: 5; background: rgb(255 255 255 / 96%); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
 .nav { min-height: 94px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .brand { display: inline-flex; align-items: center; text-decoration: none; }
-.brand-logo { display: block; width: min(280px, 38vw); height: auto; }
+.brand-logo { display: block; width: min(320px, 40vw); height: auto; }
 .nav-links { display: flex; align-items: center; gap: 27px; }
 .nav-links a { text-decoration: none; color: #334c67; font-size: .9rem; font-weight: 650; }
 .nav-links a:hover { color: var(--blue); }
@@ -120,7 +121,7 @@ footer p { margin: 0; }
   .topbar-inner { justify-content: center; text-align: center; }
   .topbar-inner span:first-child { display: none; }
   .nav { min-height: 82px; }
-  .brand-logo { width: min(260px, 40vw); }
+  .brand-logo { width: min(290px, 40vw); }
   .nav-links { gap: 15px; }
   .nav-links a { font-size: .81rem; }
   .nav-links .button { display: none; }
@@ -138,7 +139,7 @@ footer p { margin: 0; }
 @media (max-width: 480px) {
   .wrap { width: min(100% - 30px, 1120px); }
   .nav { flex-wrap: wrap; padding-block: 12px; }
-  .brand-logo { width: min(270px, 70vw); }
+  .brand-logo { width: min(290px, 74vw); }
   .nav-links { gap: 11px; }
   .nav-links a { font-size: .76rem; }
   .nav-links { width: 100%; justify-content: space-between; }
