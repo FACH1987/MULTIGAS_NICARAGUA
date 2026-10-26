@@ -21,6 +21,8 @@ a { color: inherit; }
 .topbar { background: var(--blue-dark); color: #e3edf6; font-size: .83rem; }
 .topbar-inner { display: flex; justify-content: space-between; gap: 20px; padding-block: 9px; }
 .topbar a { text-decoration: none; }
+.topbar-contact { display: flex; align-items: center; gap: 14px; }
+.topbar-brand { color: #ffad63; }
 header { position: sticky; top: 0; z-index: 5; background: rgb(255 255 255 / 96%); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
 .nav { min-height: 94px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .brand { display: inline-flex; align-items: center; text-decoration: none; }
