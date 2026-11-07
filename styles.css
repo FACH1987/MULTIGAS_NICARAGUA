@@ -226,3 +226,16 @@ section, #contacto { scroll-margin-top: 110px; }
   .footer-inner a { display: inline-flex; align-items: center; min-height: 44px; }
   section, #contacto { scroll-margin-top: 145px; }
 }
+
+/* Icon-only contact actions, with accessible names. */
+.contact-details.contact-icon-links { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px; }
+.contact-icon { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 60px; width: 60px; height: 60px; border: 1px solid rgb(255 255 255 / 22%); border-radius: 50%; background: white; color: var(--blue-dark); text-decoration: none; transition: transform .2s, background .2s; }
+.contact-icon svg { width: 27px; height: 27px; }
+.contact-icon.whatsapp { color: white; background: #12864c; }
+.contact-icon:hover { background: #deedfa; transform: translateY(-3px); }
+.contact-icon.whatsapp:hover { background: #0b6c3b; }
+@media (max-width: 640px) {
+  .contact-details.contact-icon-links { justify-content: flex-start; gap: 12px; }
+  .contact-icon { flex-basis: 48px; width: 48px; height: 48px; }
+  .contact-icon svg { width: 24px; height: 24px; }
+}
