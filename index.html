@@ -25,8 +25,8 @@
         <img class="brand-logo" src="assets/instalaciones-gas-lp-seguridad-managua.svg" alt="Instalaciones de Gas LP y seguridad Managua">
       </a>
       <div class="nav-links">
-        <a href="#productos">Productos</a>
-        <a href="#servicios">Servicios</a>
+        <a href="#inicio" data-view-link="inicio">Inicio</a><a href="#productos" data-view-link="productos">Productos</a>
+        <a href="#servicios" data-view-link="servicios">Servicios</a>
         <a href="#contacto">Contacto</a>
         <a class="button" href="#contacto">Contáctanos <span aria-hidden="true">↗</span></a>
       </div>
@@ -34,7 +34,7 @@
   </header>
 
   <main>
-    <section class="hero" id="inicio">
+    <section class="hero" id="inicio" data-view="inicio">
       <div class="wrap hero-grid">
         <div>
           <span class="eyebrow">Instalaciones de Gas LP y seguridad Managua</span>
@@ -58,7 +58,7 @@
       </div>
     </section>
 
-    <div class="trust-strip" aria-label="Áreas de atención">
+    <div class="trust-strip" data-view="inicio" aria-label="Áreas de atención">
       <div class="wrap trust-inner">
         <div class="trust-item"><span class="check" aria-hidden="true">✓</span> Productos para gas LP</div>
         <div class="trust-item"><span class="check" aria-hidden="true">✓</span> Seguridad contra incendios</div>
@@ -66,7 +66,7 @@
       </div>
     </div>
 
-    <section class="section" id="productos">
+    <section class="section" id="productos" data-view="productos">
       <div class="wrap">
         <div class="section-head">
           <span class="eyebrow">Productos</span>
@@ -280,7 +280,7 @@
       </div>
     </section>
 
-    <section class="section services" id="servicios">
+    <section class="section services" id="servicios" data-view="servicios">
       <div class="wrap services-layout">
         <div class="services-intro">
           <span class="eyebrow">Servicios</span>
@@ -319,43 +319,45 @@
       </div>
     </section>
 
-    <section class="contact" id="contacto">
+    </main>
+
+  <footer id="contacto">
+    <section class="contact">
       <div class="wrap contact-grid">
         <div>
           <span class="eyebrow">Contacto</span>
           <h2>Hablemos de lo que necesitas.</h2>
           <p class="contact-copy">Comunícate con nosotros por teléfono, WhatsApp o correo electrónico. También puedes visitarnos en Managua.</p>
-          <a class="button button-light" href="mailto:Ruddysevilla92@gmail.com">Escribir por correo <span aria-hidden="true">↗</span></a>
+
         </div>
         <div class="contact-details">
           <div class="contact-item">
             <span class="contact-symbol" aria-hidden="true">T</span>
-            <div><strong>Teléfono</strong><a href="tel:+50522320300">2232 0300</a></div>
+            <div><strong>Teléfono</strong><a href="tel:+50522320300" class="contact-button">Llamar: 2232 0300</a></div>
           </div>
           <div class="contact-item">
             <span class="contact-symbol" aria-hidden="true">W</span>
             <div>
               <strong>WhatsApp</strong>
               <div class="contact-links">
-                <a href="https://wa.me/50581355045">+505 8135 5045</a>
-                <a href="https://wa.me/50557196393">+505 5719 6393</a>
+                <a href="https://wa.me/50581355045" class="contact-button whatsapp">WhatsApp: +505 8135 5045</a>
+                <a href="https://wa.me/50557196393" class="contact-button whatsapp">WhatsApp: +505 5719 6393</a>
               </div>
             </div>
           </div>
           <div class="contact-item">
             <span class="contact-symbol" aria-hidden="true">@</span>
-            <div><strong>Correo electrónico</strong><a href="mailto:Ruddysevilla92@gmail.com">Ruddysevilla92@gmail.com</a></div>
+            <div><strong>Correo electrónico</strong><a href="mailto:Ruddysevilla92@gmail.com" class="contact-button">Enviar email</a></div>
           </div>
           <div class="contact-item">
             <span class="contact-symbol" aria-hidden="true">⌖</span>
-            <div><strong>Dirección</strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Carretera%20Norte%2C%20km%202.4%2C%20sem%C3%A1foros%20antigua%20Pepsi%2C%205%20y%20media%20al%20norte%2C%20Managua%2C%20Nicaragua" target="_blank" rel="noopener noreferrer">Carretera Norte, km 2.4, semáforos antigua Pepsi, 5 y media al norte, Managua, Nicaragua.</a></div>
+            <div><strong>Dirección</strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Carretera%20Norte%2C%20km%202.4%2C%20sem%C3%A1foros%20antigua%20Pepsi%2C%205%20y%20media%20al%20norte%2C%20Managua%2C%20Nicaragua" class="contact-button" target="_blank" rel="noopener noreferrer">Cómo llegar: Carretera Norte, km 2.4, semáforos antigua Pepsi, 5 y media al norte, Managua, Nicaragua.</a></div>
           </div>
         </div>
       </div>
     </section>
-  </main>
 
-  <footer>
+
     <div class="wrap footer-inner">
       <p>© <span id="year">2026</span> Instalaciones de Gas LP y seguridad Managua</p>
       <p class="footer-credit">Diseñado por <strong>GueguenseDigital</strong></p>
@@ -363,6 +365,24 @@
     </div>
   </footer>
   <script>
+    const viewNames = ['inicio', 'productos', 'servicios'];
+    let activeView = 'inicio';
+    function showView() {
+      const requested = location.hash.slice(1);
+      if (viewNames.includes(requested)) activeView = requested;
+      document.querySelectorAll('[data-view]').forEach(section => {
+        section.hidden = section.dataset.view !== activeView;
+        if (section.hidden) section.querySelectorAll('video').forEach(video => video.pause());
+      });
+      document.querySelectorAll('[data-view-link]').forEach(link => {
+        if (link.dataset.viewLink === activeView) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
+      });
+      if (requested !== 'contacto') window.scrollTo(0, 0);
+    }
+    showView();
+    window.addEventListener('hashchange', showView);
+    document.getElementById('year').textContent = new Date().getFullYear();
     document.querySelectorAll(".product-gallery").forEach((gallery) => {
       gallery.addEventListener("click", (event) => {
         const thumbnails = [...gallery.querySelectorAll("[data-gallery-thumbnail]")];
